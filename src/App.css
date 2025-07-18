@@ -10,7 +10,7 @@
 }
 
 .container{
-    height: 695px;
+    height: 100vh;
     background-size: cover;
     background-image: url("./images/background.jpg");
     background-position: center;
