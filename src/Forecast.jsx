@@ -40,7 +40,7 @@ const Forecast = (data) => {
   }, []);
 
   return (
-    <div style={{display:'flex', flexDirection:'column',justifyContent:'space-between', alignItems:'center', height:'100%',gap:'20px'}}>
+    <div style={{display:'flex', flexDirection:'column',justifyContent:'space-between', alignItems:'center', height:'100%',gap:'20px', overflowY:'scroll'}}>
       
       <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'10px',width:'90%'}}>
         <div style={{padding:'25px 0'}}>
