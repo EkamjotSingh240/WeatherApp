@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+    font-family: sans-serif;
+}
+*:hover{
+    cursor:default;
+}
+
+.container{
+    height: 695px;
+    background-size: cover;
+    background-image: url("./images/background.jpg");
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading{
+    background-color: rgba(0, 0, 0, 0.655);
+}
+
+.city{
+    background-size: cover;
+    background-image: url("./images/city.jpg");
+    color: white;
+    height: 100%;
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 30px 0 0 30px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.date-time{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.dmy{
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content2{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.685);
+    border-radius: 0 30px 30px 0;
+    padding: 0 20px;
+    color: white; 
+    flex: 4;
+}
+
+input{
+    all: unset;
+    border-bottom: 1px solid white;
+}
+input:hover {
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+button{
+    background-color: unset;
+    border: unset;
+}
+button:hover {
+    background-color: #7d7d7d;
+    border-radius: 20px;
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+button :hover{
+    cursor:pointer;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #8a8a8a;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
