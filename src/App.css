@@ -19,6 +19,14 @@
     justify-content: center;
 }
 
+.main-container{
+    display: flex;
+    width: 65%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
 .loading{
     background-color: rgba(0, 0, 0, 0.655);
 }
@@ -54,6 +62,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.temperature p{
+    font-size: 80px;
+}
+.temperature span{
+    font-size: 65px;
 }
 
 .content2{
@@ -96,4 +111,72 @@ hr{
     width: 100%;
     margin: 0;
     padding: 0;
+}
+
+.city-name{
+    font-family:'sans-serif';
+    font-size:50px;
+}
+
+.country-name{
+    font-family:'sans-serif';
+    font-size:40px;
+    font-weight:600;
+}
+
+.weather-details-city .location-name{
+    font-size: 25px;
+    font-stretch: expanded;
+}
+
+.weather-details-city p{
+    font-size: 18px;
+    font-stretch: expanded;
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+    .container{
+        flex-direction: column;
+    }
+    .main-container{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .city{
+        width: 100%;
+        height: 40%;
+        border-radius: 30px 30px 0 0;
+    }
+    .city-name {
+        font-size: 30px;
+    }
+    .country-name {
+        font-size: 25px;
+    }
+    .dmy {
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    .temperature p {
+        font-size: 50px;
+    }
+    .temperature span {
+        font-size: 40px;
+    }
+
+    .content2 {
+        width: 100%;
+        height: 60%;
+        border-radius: 0 0 30px 30px;
+        padding: 10px;
+    }
+    .weather-details-city .location-name {
+        font-size: 20px;
+    }
+    .weather-details-city p {
+        font-size: 16px;
+    }
 }
