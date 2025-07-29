@@ -130,21 +130,21 @@ class Weather extends React.Component {
                 <React.Fragment>
                     <div className="city" >
                         <div className="title">
-                            <h1 style={{fontFamily:'sans-serif', fontSize:'50px'}}>{this.state.city}</h1>
-                            <h2 style={{fontFamily:'sans-serif', fontSize:'40px', fontWeight:'600'}}>{this.state.country}</h2>
+                            <h1 className='city-name'>{this.state.city}</h1>
+                            <h2 className='country-name'>{this.state.country}</h2>
                         </div>
                         
                         <div className="date-time">
                             <div className="dmy">
                                 <div className="current-time">
-                                    <LiveClock format={'HH:mm:ss'} ticking={true} interval={1000} timezone={'Asia/Kolkata'} style={{fontSize:'35px', fontFamily:'sans-serif'}}/>
+                                    <LiveClock format={'HH:mm:ss'} ticking={true} interval={1000} timezone={'Asia/Kolkata'} style={{fontSize:'clamp(25px, 4vw, 35px)', fontFamily:'sans-serif'}}/>
                                 </div>
-                                <div className="current-date" style={{fontSize:'25px', wordSpacing:'4px', letterSpacing:'1px'}}>
+                                <div className="current-date" style={{fontSize: 'clamp(18px, 2vw, 25px)', wordSpacing:'4px', letterSpacing:'1px'}}>
                                     {datebuilder(new Date())}
                                 </div>
                             </div>
                             <div className="temperature">
-                                <p style={{fontSize:'80px'}}>{this.state.temperatureC}°<span style={{fontSize:'65px'}}>c</span></p>
+                                <p>{this.state.temperatureC}°<span>c</span></p>
                             </div>
                         </div>
                     </div>
