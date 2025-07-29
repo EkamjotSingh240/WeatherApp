@@ -3,7 +3,7 @@ import Weather from './currentLocation'
 
 const App = () => {
   return (
-      <div style={{display:'flex', justifyContent:'center', alignItems: 'center', height:'80vh', width:'150vh'}}>
+      <div className='main-container'>
         <Weather />
       </div>
       
