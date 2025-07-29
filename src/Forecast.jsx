@@ -40,9 +40,9 @@ const Forecast = (data) => {
   }, []);
 
   return (
-    <div style={{display:'flex', flexDirection:'column',justifyContent:'space-between', alignItems:'center', height:'100%',gap:'20px', overflowY:'scroll'}}>
-      
-      <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'10px',width:'90%'}}>
+    <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'3vh', height:'100%', overflowY:'scroll'}}>
+
+      <div style={{flex: '1 1 250px', display:'flex', flexDirection:'column', alignItems:'center', gap:'10px',width:'90%'}}>
         <div style={{padding:'25px 0'}}>
           {" "}
           <ReactAnimatedWeather 
@@ -52,7 +52,7 @@ const Forecast = (data) => {
             animate={defaults.animate}
           />
         </div>
-        <div style={{display:'flex', flexDirection:'column', alignItems:'center',gap:'20px',width:'100%'}}>
+        <div style={{ display:'flex', flexDirection:'column', alignItems:'center',gap:'20px',width:'100%'}}>
           <h1 style={{fontSize:'45px', fontWeight:'500'}}> {typeof weather.main != 'undefined' ? (weather.weather[0].main) : (data.weather)}</h1>
           <hr />
           <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
@@ -62,32 +62,32 @@ const Forecast = (data) => {
         </div>
       </div>
 
-      <div style={{width:'100%', paddingBottom:'10px'}}>
+      <div style={{flex: '1 1 250px', width:'100%', paddingBottom:'10px'}}>
         {typeof weather.main != 'undefined' ? (
-          <div style={{padding:'0', margin:'0', display:'flex', flexDirection:'column', gap:'10px'}}>
+          <div className='weather-details-city' style={{padding:'0', margin:'0', display:'flex', flexDirection:'column', gap:'10px'}}>
             <div style={{display:'flex', alignItems:'center', justifyContent:'center', gap:'10px'}}>
-              <p style={{fontSize:'25px', fontStretch:'expanded'}}>{weather.name}, {weather.sys.country}</p>
+              <p className='location-name'> {weather.name}, {weather.sys.country}</p>
               <img src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}.png`} />
             </div>
             <hr />
             <div style={{display:'flex', justifyContent:'space-between', paddingLeft:'20px', paddingRight:'10px'}}>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>Temperature</p>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>{(weather.main.temp-273.15).toFixed(1)}&deg;c({weather.weather[0].main})</p>
+              <p>Temperature</p>
+              <p>{(weather.main.temp-273.15).toFixed(1)}&deg;c({weather.weather[0].main})</p>
             </div>
             <hr />
             <div style={{display:'flex', justifyContent:'space-between', paddingLeft:'20px', paddingRight:'10px'}}>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>Humidity</p>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>{weather.main.humidity}%</p>
+              <p>Humidity</p>
+              <p>{weather.main.humidity}%</p>
             </div>
             <hr />
             <div style={{display:'flex', justifyContent:'space-between', paddingLeft:'20px', paddingRight:'10px'}}>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>Visibility</p>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>{(weather.visibility/1000).toFixed(0)}km</p>
+              <p>Visibility</p>
+              <p>{(weather.visibility/1000).toFixed(0)}km</p>
             </div>
             <hr />
             <div style={{display:'flex', justifyContent:'space-between', paddingLeft:'20px', paddingRight:'10px'}}>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>Wind Speed</p>
-              <p style={{fontSize:'18px', fontStretch:'expanded'}}>{weather.wind.speed}km/hr</p>
+              <p>Wind Speed</p>
+              <p>{weather.wind.speed}km/hr</p>
             </div>
           </div>
         ) :
